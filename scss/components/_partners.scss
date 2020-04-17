@@ -3,10 +3,18 @@
 .partners {
   margin-top: 140px;
 
+  @media (max-width: $sm) {
+    margin-top: 60px;
+  }
+
   &__block {
     background: $green;
     border-radius: 28px;
     display: flex;
+
+    @media (max-width: $xs) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__content {
@@ -15,12 +23,39 @@
     line-height: 156.5%;
     color: white;
     width: 50%;
+
+    @media (max-width: $lg) {
+      padding-left: 60px;
+    }
+
+    @media (max-width: $md) {
+      padding: 30px;
+    }
+
+    @media (max-width: $sm) {
+      font-size: 14px;
+    }
+
+    @media (max-width: $xs) {
+      padding: 15px;
+      width: 100%;
+    }
   }
 
   &__square {
     background: $grey;
     border-radius: 29px;
     position: absolute;
+
+    @media (max-width: $xs) {
+      position: relative;
+      flex-shrink: 0;
+      top: auto!important;
+      left: auto!important;
+      right: auto!important;
+      bottom: auto!important;
+      margin-top: 15px;
+    }
 
     &:nth-child(1) {
       right: 433px;
@@ -30,6 +65,21 @@
 
       img {
         margin: 10px 0 0 -9px;
+      }
+
+      @media (max-width: $md) {
+        width: 146px;
+        height: 146px;
+        right: 300px;
+
+        img {
+          max-width: 166px;
+          margin: 8px 0 0 -10px;
+        }
+      }
+
+      @media (max-width: $sm) {
+        right: 220px;
       }
     }
 
@@ -41,6 +91,23 @@
 
       img {
         margin: 3px 0 0 -17px;
+      }
+
+      @media (max-width: $md) {
+        width: 97px;
+        height: 97px;
+        top: 65px;
+        right: 168px;
+
+        img {
+          max-width: 121px;
+          margin: 5px 0 0 -12px;
+        }
+      }
+
+      @media (max-width: $sm) {
+        right: 126px;
+        top: 38px;
       }
     }
 
@@ -54,6 +121,16 @@
       img {
         margin: auto;
       }
+
+      @media (max-width: $md) {
+        width: 93px;
+        height: 93px;
+        right: 57px;
+
+        img {
+          max-width: 50px;
+        }
+      }
     }
 
     &:nth-child(4) {
@@ -66,6 +143,22 @@
       img {
         margin: auto;
       }
+
+      @media (max-width: $md) {
+        width: 82px;
+        height: 82px;
+        bottom: -40px;
+        right: 304px;
+
+        img {
+          max-width: 46px;
+        }
+      }
+
+      @media (max-width: $sm) {
+        right: 250px;
+        bottom: 10px;
+      }
     }
 
     &:nth-child(5) {
@@ -77,11 +170,32 @@
       img {
         margin: 2px 0 0 -18px;
       }
+
+      @media (max-width: $md) {
+        width: 120px;
+        height: 120px;
+        bottom: -60px;
+        right: 30px;
+
+        img {
+          max-width: 156px;
+          margin: -1px 0 0 -19px;
+        }
+      }
     }
   }
 
   &__right {
     width: 50%;
     position: relative;
+
+    @media (max-width: $xs) {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0 15px;
+    }
   }
 }

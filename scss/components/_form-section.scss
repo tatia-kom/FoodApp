@@ -15,6 +15,20 @@
     justify-content: space-between;
     align-items: center;
 
+    @media (max-width: $lg) {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+
+    @media (max-width: $md) {
+      padding: 30px;
+    }
+
+    @media (max-width: $xs) {
+      padding: 15px;
+      flex-direction: column;
+    }
+
     &--aqua {
       background: #0BB1BC;
       border-radius: 28px;
@@ -28,27 +42,69 @@
   &__content {
     color: white;
     width: 46%;
+
+    @media (max-width: $md) {
+      width: 60%;
+    }
+
+    @media (max-width: $sm) {
+      width: 50%;
+    }
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
   }
 
   &__title {
     font-weight: bold;
     font-size: 30px;
     line-height: 37px;
+
+    @media (max-width: $sm) {
+      font-size: 22px;
+      line-height: 30px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 20px;
+    }
   }
 
   &__text {
     font-size: 16px;
     line-height: 25px;
     margin-top: 20px;
+
+    @media (max-width: $sm) {
+      font-size: 14px;
+
+      br {
+        display: none;
+      }
+    }
+
+    @media (max-width: $xs) {
+      margin-top: 10px;
+    }
   }
 
   &__form {
     display: flex;
     flex-direction: column;
+
+    @media (max-width: $xs) {
+      margin-top: 20px;
+      width: 100%;
+    }
   }
 
   &__inputs {
     display: flex;
+
+    @media (max-width: $md) {
+      flex-direction: column;
+    }
   }
 
   &__input {
@@ -61,7 +117,26 @@
     padding: 14px 16px;
     font-size: 14px;
 
+    @media (max-width: $md) {
+      width: 330px;
+    }
+
+    @media (max-width: $sm) {
+      width: 280px;
+    }
+
+    @media (max-width: $xs) {
+      width: 100%;
+      margin-left: 0;
+    }
+
     @include placeholderColor(#C4C4C4);
+
+    &:last-child {
+      @media (max-width: $md) {
+        margin-top: 15px;
+      }
+    }
   }
 
   &__button-wrap {
@@ -124,6 +199,15 @@
       height: 34px;
       right: 618px;
       bottom: -9px;
+
+      @media (max-width: $md) {
+        right: 553px;
+      }
+
+      @media (max-width: $sm) {
+        right: 500px;
+        bottom: -13px;
+      }
     }
 
     &:nth-child(3) {
@@ -132,6 +216,15 @@
       height: 53px;
       right: 428px;
       bottom: 29px;
+
+      @media (max-width: $md) {
+        right: 363px;
+      }
+
+      @media (max-width: $sm) {
+        right: 290px;
+        bottom: 19px;
+      }
     }
 
     &:nth-child(4) {
@@ -140,6 +233,14 @@
       height: 41px;
       right: 265px;
       bottom: -20px;
+
+      @media (max-width: $md) {
+        right: 200px;
+      }
+
+      @media (max-width: $sm) {
+        right: 170px;
+      }
     }
   }
 }

@@ -1,10 +1,27 @@
 @import "layout/var";
 
 .about {
+  @media (max-width: $sm) {
+    padding-top: 50px;
+  }
+
+  @media (max-width: $xs) {
+    position: relative;
+    z-index: 20;
+  }
+
   &__flex {
     display: flex;
     align-items: center;
     margin: 0 137px 0 80px;
+
+    @media (max-width: $md) {
+      margin: 0;
+    }
+
+    @media (max-width: $xs) {
+      flex-direction: column;
+    }
   }
 
   &__left {
@@ -13,6 +30,14 @@
     width: 442px;
     display: flex;
     justify-content: center;
+
+    @media (max-width: $sm) {
+      width: 300px;
+    }
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
 
     &:before {
       content: '';
@@ -25,12 +50,36 @@
       top: 50%;
       left: 0;
       transform: translateY(-50%);
+
+      @media (max-width: $sm) {
+        width: 270px;
+        height: 270px;
+      }
+
+      @media (max-width: $xs) {
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
 
   &__phone {
     position: relative;
     z-index: 1;
+
+    @media (max-width: $sm) {
+      transform: translateX(-15px);
+    }
+
+    @media (max-width: $xs) {
+      transform: none;
+    }
+
+    img {
+      @media (max-width: $sm) {
+        max-width: 215px;
+      }
+    }
   }
 
   &__plate {
@@ -39,10 +88,33 @@
     top: calc(50% + 7px);
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @media (max-width: $sm) {
+      left: 45%;
+    }
+
+    @media (max-width: $xs) {
+      left: 50%;
+    }
+
+    img {
+      @media (max-width: $sm) {
+        max-width: 270px;
+      }
+    }
   }
 
   &__content {
     margin-left: 115px;
+
+    @media (max-width: $sm) {
+      margin-left: 30px;
+    }
+
+    @media (max-width: $xs) {
+      margin-left: 0;
+      margin-top: 30px;
+    }
   }
 
   &__name {
@@ -55,6 +127,10 @@
     font-weight: bold;
     font-size: 30px;
     line-height: 160.9%;
+
+    @media (max-width: $sm) {
+      font-size: 20px;
+    }
   }
 
   &__text {
@@ -62,5 +138,10 @@
     font-size: 16px;
     line-height: 156.5%;
     margin-top: 26px;
+
+    @media (max-width: $sm) {
+      font-size: 14px;
+      margin-top: 20px;
+    }
   }
 }

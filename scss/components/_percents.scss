@@ -5,10 +5,26 @@
   &__flex {
     display: flex;
     justify-content: center;
+
+    @media (max-width: $xs) {
+      flex-direction: column;
+    }
   }
 
   &__item {
     margin: 0 48px;
+
+    @media (max-width: $sm) {
+      margin: 0 30px;
+    }
+
+    @media (max-width: $xs) {
+      margin-top: 30px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
   }
 
   &__num {
@@ -21,6 +37,18 @@
       font-size: 75px;
       background: white;
       mix-blend-mode: screen;
+
+      @media (max-width: $md) {
+        font-size: 60px;
+      }
+
+      @media (max-width: $sm) {
+        font-size: 50px;
+      }
+
+      @media (max-width: $xs) {
+        text-align: center;
+      }
     }
   }
 
@@ -34,6 +62,10 @@
   .container {
     position: relative;
     padding: 158px 0 121px;
+
+    @media (max-width: $sm) {
+      padding: 100px 0;
+    }
   }
 
   &__circle {
@@ -50,6 +82,21 @@
       height: 46px;
       top: 158px;
       left: 67px;
+
+      @media (max-width: $md) {
+        left: 30px;
+        top: 120px;
+      }
+
+      @media (max-width: $sm) {
+        left: 0;
+        top: 60px;
+      }
+
+      @media (max-width: $xs) {
+        top: 30px;
+        left: 15px;
+      }
     }
 
     &:nth-child(2) {
@@ -58,6 +105,10 @@
       height: 38px;
       top: 48px;
       left: 166px;
+
+      @media (max-width: $sm) {
+        top: 20px;
+      }
     }
 
     &:nth-child(3) {
@@ -66,6 +117,19 @@
       height: 46px;
       bottom: 104px;
       right: 113px;
+
+      @media (max-width: $md) {
+        bottom: 50px;
+      }
+
+      @media (max-width: $sm) {
+        bottom: 20px;
+        right: 200px;
+      }
+
+      @media (max-width: $xs) {
+        right: 150px;
+      }
     }
 
     &:nth-child(4) {
@@ -74,6 +138,20 @@
       height: 42px;
       bottom: 240px;
       right: 72px;
+
+      @media (max-width: $md) {
+        right: 30px;
+        bottom: 150px;
+      }
+
+      @media (max-width: $sm) {
+        right: 0;
+        bottom: 70px;
+      }
+
+      @media (max-width: $xs) {
+        right: 15px;
+      }
     }
   }
 }

@@ -3,6 +3,10 @@
 .tariffs {
   position: relative;
 
+  @media (max-width: $xs) {
+    overflow: hidden;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -17,6 +21,10 @@
   .container {
     position: relative;
     padding: 38px 0 70px;
+
+    @media (max-width: $xs) {
+      padding-bottom: 30px;
+    }
   }
 
   &__circle {
@@ -33,6 +41,10 @@
       background: #F7C154;
       right: calc(50% + 362px);
       top: 14px;
+
+      @media (max-width: $sm) {
+        right: calc(50% + 250px);
+      }
     }
 
     &:nth-child(2) {
@@ -41,6 +53,10 @@
       background: #668FCD;
       left: calc(50% + 304px);
       top: 33px;
+
+      @media (max-width: $sm) {
+        left: calc(50% + 250px);
+      }
     }
   }
 
@@ -49,6 +65,12 @@
     font-size: 30px;
     line-height: 48px;
     text-align: center;
+
+    @media (max-width: $xs) {
+      font-size: 24px;
+      line-height: 120%;
+      padding: 0 15px;
+    }
   }
 
   &__subtitle {
@@ -62,10 +84,23 @@
     justify-content: center;
     align-items: flex-start;
     margin-top: 46px;
+
+    @media (max-width: $xs) {
+      display: block;
+    }
   }
 
   &__item-wrap {
     margin-right: 72px;
+
+    @media (max-width: $md) {
+      margin-right: 30px;
+    }
+
+    @media (max-width: $xs) {
+      //width: 220px!important;
+      margin: 0 15px!important;
+    }
 
     &:last-child {
       margin-right: 0;
@@ -80,10 +115,23 @@
     overflow: hidden;
     position: relative;
 
+    @media (max-width: $sm) {
+      width: 220px;
+    }
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
+
     &--basic {
       .tariffs__head {
         background: #13B6FC;
         padding: 19px 40px 23px;
+
+        @media (max-width: $sm) {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
       }
     }
 
@@ -104,6 +152,14 @@
     padding: 19px 25px 44px;
     color: white;
     text-align: center;
+
+    @media (max-width: $sm) {
+      padding: 19px 15px 44px;
+    }
+
+    @media (max-width: $xs) {
+      padding: 19px 10px 44px;
+    }
   }
 
   &__name {
@@ -118,9 +174,17 @@
     font-size: 20px;
     font-weight: 300;
 
+    @media (max-width: $sm) {
+      font-size: 16px;
+    }
+
     span {
       font-weight: bold;
       font-size: 25px;
+
+      @media (max-width: $sm) {
+        font-size: 22px;
+      }
     }
   }
 
@@ -132,6 +196,15 @@
     color: white;
     text-align: center;
     padding: 10px 25px;
+
+    @media (max-width: $sm) {
+      padding: 10px 0;
+    }
+
+    @media (max-width: $xs) {
+      width: calc(100% - 20px);
+      margin: -30px 10px 0;
+    }
 
     &:before {
       content: '';
@@ -160,6 +233,10 @@
 
     & + .tariffs__list {
       margin-top: 50px;
+
+      @media (max-width: $sm) {
+        margin-top: 85px;
+      }
     }
   }
 
@@ -169,6 +246,10 @@
 
     span {
       text-decoration-line: line-through;
+
+      @media (max-width: $sm) {
+        display: block;
+      }
     }
   }
 
@@ -182,6 +263,10 @@
     list-style: none;
     margin: 0;
     padding: 8px 25px 27px;
+
+    @media (max-width: $xs) {
+      padding: 8px 10px 27px;
+    }
   }
 
   &__option {
@@ -190,6 +275,12 @@
     padding-left: 22px;
     position: relative;
     margin-top: 10px;
+
+    @media (max-width: $xs) {
+      padding-left: 18px;
+      font-size: 12px;
+      line-height: 16px;
+    }
 
     &:before {
       content: '';

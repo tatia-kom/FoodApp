@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <section class="top">
+    <section class="top" id="who">
         <div class="top__bg-image">
             <img src="img/head.svg" alt="">
             <div class="top__green-bottom"><img src="img/top-green2.svg" alt=""></div>
@@ -30,19 +30,25 @@
             <div class="top__green"><img src="img/top-green1.svg" alt=""></div>
 
             <header class="header">
-                <a href="#" class="header__link">Кто мы</a>
-                <a href="#" class="header__link">Как работает</a>
+                <a href="#who" class="header__link scroll-to">Кто мы</a>
+                <a href="#how" class="header__link scroll-to">Как работает</a>
                 <a href="#" class="app-icon"><img src="img/app-icon.svg" alt=""></a>
-                <a href="#" class="header__link">Тарифы</a>
-                <a href="#" class="header__link">Присоединиться</a>
+                <a href="#tariffs" class="header__link scroll-to">Тарифы</a>
+                <a href="#join" class="header__link scroll-to">Присоединиться</a>
             </header>
+
+            <button class="top__mobile-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
             <div class="top__content">
                 <h1 class="top__title"><strong>Увеличьте выручку ресторанов</strong> с помощью сервиса для дистанционного обслуживания гостей</h1>
                 <p class="top__text">Food up поможет запустить собственную доставку в кратчайшие сроки, повысить средний чек, привлечь новых гостей и завоевать их лояльность.</p>
-                <div class="top__button">Запустить доставку</div>
+                <a href="#delivery" class="top__button scroll-to">Запустить доставку</a>
                 <span class="top__arrow"><img src="img/top-arrow.svg" alt=""></span>
-                <a href="#" class="top__how">Как это работает?</a>
+                <a href="#how" class="top__how scroll-to">Как это работает?</a>
             </div>
 
             <div class="top__button top__button--connect">Подключить ресторан к сервису</div>
@@ -106,7 +112,7 @@
         </div>
     </section>
 
-    <section class="form-section">
+    <section class="form-section" id="delivery">
         <div class="container">
             <div class="form-section__circle"><img src="img/form1.svg" alt=""></div>
             <div class="form-section__circle"><img src="img/form2.svg" alt=""></div>
@@ -131,8 +137,11 @@
         </div>
     </section>
 
-    <section class="steps">
+    <section class="steps" id="how">
         <div class="container">
+            <div class="steps__circle"><img src="img/form4.svg" alt=""></div>
+            <div class="steps__circle"><img src="img/form1.svg" alt=""></div>
+
             <h2 class="steps__title">Управляйте успехом вашего заведения!</h2>
             <p class="steps__subtitle">{При помощи нашего сервиса. Для этого сделайте несколько шагов}</p>
 
@@ -201,7 +210,7 @@
         </div>
     </section>
 
-    <section class="tariffs">
+    <section class="tariffs" id="tariffs">
         <div class="container">
             <div class="tariffs__circle"><img src="img/form3.svg" alt=""></div>
             <div class="tariffs__circle"><img src="img/tariffs2.svg" alt=""></div>
@@ -224,7 +233,7 @@
                             <li class="tariffs__option">Подключение программы лояльности</li>
                         </ul>
                     </div>
-                    <button class="tariffs__button">Оставить данные</button>
+                    <button class="tariffs__button open-modal">Оставить данные</button>
                 </div>
                 <div class="tariffs__item-wrap">
                     <div class="tariffs__item tariffs__item--standart">
@@ -248,7 +257,7 @@
                             <li class="tariffs__option tariffs__option--additional">Инструменты аналитики</li>
                         </ul>
                     </div>
-                    <button class="tariffs__button">Оставить данные</button>
+                    <button class="tariffs__button open-modal">Оставить данные</button>
                 </div>
                 <div class="tariffs__item-wrap">
                     <div class="tariffs__item tariffs__item--premium">
@@ -274,7 +283,7 @@
                             <li class="tariffs__option tariffs__option--additional">DeepLinks + UTM</li>
                         </ul>
                     </div>
-                    <button class="tariffs__button">Оставить данные</button>
+                    <button class="tariffs__button open-modal">Оставить данные</button>
                 </div>
             </div>
         </div>
@@ -294,7 +303,7 @@
         </div>
     </section>
 
-    <section class="form-section form-section--green">
+    <section class="form-section form-section--green" id="join">
         <div class="container">
             <div class="form-section__circle"><img src="img/form1.svg" alt=""></div>
             <div class="form-section__circle"><img src="img/form2.svg" alt=""></div>
@@ -339,18 +348,25 @@
                     <p class="footer__copyright">Copyright © 2020 FoodApp. All rights reserved.</p>
                 </div>
                 <nav class="footer__menu">
-                    <a href="#" class="footer__link">Кто мы</a>
-                    <a href="#" class="footer__link">Как работает</a>
-                    <a href="#" class="footer__link">Тарифы</a>
-                    <a href="#" class="footer__link">Присоединиться</a>
+                    <a href="#who" class="footer__link scroll-to">Кто мы</a>
+                    <a href="#how" class="footer__link scroll-to">Как работает</a>
+                    <a href="#tariffs" class="footer__link scroll-to">Тарифы</a>
+                    <a href="#join" class="footer__link scroll-to">Присоединиться</a>
                 </nav>
             </div>
         </div>
     </footer>
 
-    <div class="modal" id="call-modal">
+    <div class="modal">
         <div class="modal__content">
+            <span class="modal__close"></span>
 
+            <p class="modal__title">Оставьте ваш email</p>
+            <p class="modal__text">и получите инструкцию «как увеличить все показатели ресторана на 30% за 2 месяца».</p>
+
+            <input type="text" class="modal__input" placeholder="Email">
+
+            <buton class="modal__button">Отправить</buton>
         </div>
     </div>
 

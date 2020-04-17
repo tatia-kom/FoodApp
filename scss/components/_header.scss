@@ -8,6 +8,22 @@
   z-index: 10;
   padding-top: 7px;
 
+  @media (max-width: $xs) {
+    flex-direction: column;
+    justify-content: flex-start;
+    background: $grey;
+    padding: 15px 15px 0;
+    margin-left: -15px;
+    width: calc(100% + 30px);
+    height: 100px;
+    overflow: hidden;
+    transition: 0.3s;
+
+    &--opened_menu {
+      height: 280px;
+    }
+  }
+
   &__link {
     padding: 15px 3px;
     font-size: 14px;
@@ -15,6 +31,14 @@
     color: black;
     position: relative;
     margin: 0 32px;
+
+    @media (max-width: $sm) {
+      margin: 0 20px;
+    }
+
+    @media (max-width: $xs) {
+      order: 1;
+    }
 
     &:after {
       content: '';
@@ -39,5 +63,16 @@
 
   .app-icon {
     margin: 0 38px;
+
+    @media (max-width: $sm) {
+      margin: 0 20px;
+    }
+
+    @media (max-width: $xs) {
+      order: 0;
+      align-self: flex-start;
+      margin: 0;
+      flex-shrink: 0;
+    }
   }
 }
