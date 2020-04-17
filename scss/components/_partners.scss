@@ -1,0 +1,87 @@
+@import "layout/var";
+
+.partners {
+  margin-top: 140px;
+
+  &__block {
+    background: $green;
+    border-radius: 28px;
+    display: flex;
+  }
+
+  &__content {
+    padding: 57px 60px 63px 106px;
+    font-size: 16px;
+    line-height: 156.5%;
+    color: white;
+    width: 50%;
+  }
+
+  &__square {
+    background: $grey;
+    border-radius: 29px;
+    position: absolute;
+
+    &:nth-child(1) {
+      right: 433px;
+      top: -69px;
+      width: 176px;
+      height: 176px;
+
+      img {
+        margin: 10px 0 0 -9px;
+      }
+    }
+
+    &:nth-child(2) {
+      right: 292px;
+      top: 81px;
+      width: 117px;
+      height: 117px;
+
+      img {
+        margin: 3px 0 0 -17px;
+      }
+    }
+
+    &:nth-child(3) {
+      right: 121px;
+      top: -49px;
+      width: 123px;
+      height: 123px;
+      display: flex;
+
+      img {
+        margin: auto;
+      }
+    }
+
+    &:nth-child(4) {
+      right: 528px;
+      bottom: -56px;
+      width: 112px;
+      height: 112px;
+      display: flex;
+
+      img {
+        margin: auto;
+      }
+    }
+
+    &:nth-child(5) {
+      right: 94px;
+      bottom: -75px;
+      width: 150px;
+      height: 150px;
+
+      img {
+        margin: 2px 0 0 -18px;
+      }
+    }
+  }
+
+  &__right {
+    width: 50%;
+    position: relative;
+  }
+}

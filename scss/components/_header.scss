@@ -1,0 +1,43 @@
+@import "layout/var";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  padding-top: 7px;
+
+  &__link {
+    padding: 15px 3px;
+    font-size: 14px;
+    line-height: 19px;
+    color: black;
+    position: relative;
+    margin: 0 32px;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 4px;
+      background: $green;
+      bottom: 0;
+      left: 0;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+
+  .app-icon {
+    margin: 0 38px;
+  }
+}

@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap&subset=cyrillic');
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('../fonts/Comfortaa.eot');
+  src: url('../fonts/Comfortaa.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Comfortaa.woff') format('woff'),
+  url('../fonts/Comfortaa.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand Bold';
+  src: url('../fonts/Quicksand-Bold.eot');
+  src: url('../fonts/Quicksand-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Quicksand-Bold.woff') format('woff'),
+  url('../fonts/Quicksand-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+//colors
+
+$green: #0ABB66;
+$grey: #FAFAFA;
+
+//media
+
+$lg: 1421px;
+$md: 1199px;
+$sm: 991px;
+$xs: 767px;
+
+// mixins
+
+@mixin placeholderColor($color) {
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &::-ms-input-placeholder {
+    color: $color;
+  }
+  &::placeholder {
+    color: $color;
+  }
+}

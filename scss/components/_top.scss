@@ -1,0 +1,226 @@
+@import "layout/var";
+
+.top {
+  position: relative;
+  height: 894px;
+
+  .container {
+    position: relative;
+    height: 100%;
+
+    .top__circle {
+      position: absolute;
+      box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.12);
+      border-radius: 29px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:nth-child(1) {
+        width: 34px;
+        height: 34px;
+        left: 0;
+        top: 164px;
+        background: #668FCD;
+      }
+
+      &:nth-child(2) {
+        width: 53px;
+        height: 53px;
+        left: 166px;
+        top: 42px;
+        background: #F7C154;
+      }
+
+      &:nth-child(3) {
+        width: 41px;
+        height: 41px;
+        right: calc(50% + 74px);
+        top: 139px;
+        background: #FD8A97;
+      }
+
+      &:nth-child(4) {
+        width: 41px;
+        height: 41px;
+        left: 55px;
+        top: 634px;
+        background: #668FCD;
+      }
+
+      &:nth-child(5) {
+        width: 46px;
+        height: 46px;
+        left: 409px;
+        top: 693px;
+        background: #42DED3;
+      }
+
+      &:nth-child(6) {
+        width: 34px;
+        height: 34px;
+        left: 650px;
+        top: 569px;
+        background: #668FCD;
+      }
+    }
+  }
+
+  &__bg-image {
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 716px;
+    overflow: hidden;
+    background: $grey;
+    text-align: right;
+  }
+
+  &__phone {
+    position: absolute;
+    top: 69px;
+    right: 146px;
+  }
+
+  &__phone-right {
+    position: absolute;
+    top: 136px;
+    right: 0;
+  }
+
+  &__phone-bottom {
+    position: absolute;
+    right: 0;
+    bottom: -54px;
+  }
+
+  &__green {
+    position: absolute;
+    top: 0;
+    left: 37px;
+  }
+
+  &__green-bottom {
+    position: absolute;
+    left: 0;
+    bottom: 46px;
+  }
+
+  &__content {
+    margin: 130px 0 0 55px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 678px;
+  }
+
+  &__title {
+    width: 100%;
+    font-size: 30px;
+    line-height: 160.9%;
+
+    strong {
+      font-size: 39px;
+      line-height: 63px;
+      display: block;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 156.5%;
+    margin: 20px 30% 30px 0;
+  }
+
+  &__button {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(113.62deg, #0AB0BB 11.52%, #00A8F0 77.19%);
+    border-radius: 29px;
+    border: 2px solid transparent;
+    padding: 18px 22px;
+    transition: 0.3s;
+
+    &:hover {
+      border-color: #00A8F0;
+      color: #00A8F0;
+      background: transparent;
+    }
+
+    &--connect {
+      position: absolute;
+      bottom: 50px;
+      right: 0;
+      box-shadow: 0px 4px 20px rgba(5, 49, 68, 0.21);
+      padding-left: 54px;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        left: 22px;
+        top: 18px;
+        background: url('../img/top-connect.svg');
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        left: 22px;
+        top: 18px;
+        opacity: 0;
+        transition: 0.3s;
+        background: url('../img/top-connect-blue.svg');
+      }
+
+      &:hover {
+        background: white;
+
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__arrow {
+    margin: 0 11px 0 15px;
+  }
+
+  &__how {
+    font-size: 14px;
+    line-height: 19px;
+    color: black;
+    padding: 10px 0;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: $green;
+      bottom: 0;
+      left: 0;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      color: $green;
+    }
+  }
+}

@@ -1,0 +1,131 @@
+@import "layout/var";
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+    background: white;
+    position: relative;
+
+    &.opened-modal {
+        overflow: hidden;
+    }
+}
+
+p {
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    font-weight: normal;
+}
+header, footer, section, div, span, p, button, a, input, textarea, form {
+    box-sizing: border-box;
+}
+
+button,input,textarea,select{
+    outline: none;
+}
+button {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    transition: 0.3s;
+}
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:focus {
+    outline: none;
+}
+
+form {
+    margin: 0;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+.container {
+    width: 1362px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: $lg) {
+        width: 1170px;
+    }
+
+    @media (max-width: $md) {
+        width: 940px;
+    }
+
+    @media (max-width: $sm) {
+        width: 720px;
+    }
+
+    @media (max-width: $xs) {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
+.app-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    background: $green;
+    border-radius: 18px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5000;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+
+    &--opened {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    &__content {
+        margin: auto;
+    }
+
+    &__close {
+        display: block;
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        top: 19px;
+        right: 19px;
+        background: url('../img/close.svg');
+        cursor: pointer;
+        transition: 0.3s;
+        opacity: 0.24;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
