@@ -11,16 +11,16 @@
   @media (max-width: $xs) {
     flex-direction: column;
     justify-content: flex-start;
-    background: $grey;
-    padding: 15px 15px 0;
+    //background: $grey;
+    padding: 11px 19px 0 24px;
     margin-left: -15px;
     width: calc(100% + 30px);
-    height: 100px;
+    height: 60px;
     overflow: hidden;
     transition: 0.3s;
 
     &--opened_menu {
-      height: 280px;
+      height: 250px;
     }
   }
 
@@ -69,10 +69,17 @@
     }
 
     @media (max-width: $xs) {
+      width: 38px;
+      height: 38px;
+      border-radius: 6px;
       order: 0;
       align-self: flex-start;
       margin: 0;
       flex-shrink: 0;
+
+      img {
+        max-width: 21px;
+      }
     }
   }
 }

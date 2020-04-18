@@ -98,6 +98,8 @@
     }
 
     img {
+      max-width: 450px;
+
       @media (max-width: $sm) {
         max-width: 270px;
       }
