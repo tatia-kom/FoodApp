@@ -11,9 +11,11 @@
 
   &:not(.form-section--green) {
     .form-section__circle:nth-child(4) {
-      right: auto;
-      left: 15px;
-      bottom: -45px;
+      @media (max-width: $xs) {
+        right: auto;
+        left: 15px;
+        bottom: -45px;
+      }
     }
   }
 

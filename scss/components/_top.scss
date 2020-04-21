@@ -13,6 +13,12 @@
     height: auto;
     background: $grey;
     overflow: visible;
+    padding-top: 60px;
+    transition: 0.3s;
+
+    &--opened_menu {
+      padding-top: 250px;
+    }
   }
 
   &__mobile-bg {
@@ -522,10 +528,10 @@
       display: block;
       background: transparent;
       border: 0;
-      position: absolute;
+      position: fixed;
       top: 18px;
       right: 19px;
-      z-index: 11;
+      z-index: 1000;
 
       span {
         width: 26px;

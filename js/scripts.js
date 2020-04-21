@@ -6,18 +6,44 @@ $(document).ready(function() {
         restructSliders();
     });
 
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 0) {
+            $('.header').addClass('header--scroll');
+        }
+        else {
+            $('.header').removeClass('header--scroll');
+        }
+    });
+
     // menu
 
     $('.top__mobile-button').click(function(e) {
         e.preventDefault();
-        $('.header').toggleClass('header--opened_menu');
+        if (!$('.header').hasClass('header--opened_menu')) {
+
+            $('.top').addClass('top--opened_menu');
+            $('.header').addClass('header--opened_menu');
+        }
+        else {
+            $('.header').removeClass('header--opened_menu');
+            $('.top').removeClass('top--opened_menu');
+        }
     });
 
     $('.scroll-to').click(function(e) {
         e.preventDefault();
         $('.header').removeClass('header--opened_menu');
+        $('.top').removeClass('top--opened_menu');
         var scroll_el = $(this).attr('href');
         var destination = $(scroll_el).offset().top;
+        if ($(window).width() < 768) {
+            if ($(this).attr('href') == '#who') {
+                destination += 210;
+            }
+            else {
+                destination -= 250;
+            }
+        }
         $('html, body').animate( { scrollTop: destination }, 500 );
     });
 
