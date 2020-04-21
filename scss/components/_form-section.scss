@@ -9,6 +9,14 @@
     }
   }
 
+  &:not(.form-section--green) {
+    .form-section__circle:nth-child(4) {
+      right: auto;
+      left: 15px;
+      bottom: -45px;
+    }
+  }
+
   &__flex {
     padding: 50px 127px 50px 120px;
     display: flex;
