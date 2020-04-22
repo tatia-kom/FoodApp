@@ -44,8 +44,8 @@
 
   &__item {
     max-width: 144px;
-    max-height: 70px;
     margin: 0 35px;
+    outline: none;
 
     @media (max-width: $md) {
       margin: 0 20px;
