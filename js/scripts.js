@@ -141,7 +141,11 @@ function SendData(Params)
         }
         else{
             error = true;
-            mail.addClass('data-input--error');
+            if(mail)
+            {
+                mail.addClass('data-input--error');
+            }
+            
         }
     }
 
@@ -154,7 +158,10 @@ function SendData(Params)
         }
         else{
             error = true;
-            name.addClass('data-input--error');
+            if(name)
+            {
+                name.addClass('data-input--error');
+            }
         }
         
     }
