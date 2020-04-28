@@ -157,7 +157,7 @@ function SendData(Params)
     {
         $.ajax({
             type: "POST",
-            url: "http://35.189.206.115:3001/api/common/subscriptions",
+            url: "http://foodapp-proxy.herokuapp.com/api/common/subscriptions",
             data: params,
             success: function(data)
             {
