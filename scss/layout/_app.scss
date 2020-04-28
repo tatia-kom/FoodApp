@@ -90,6 +90,12 @@ footer {
     border-radius: 18px;
 }
 
+.data-input {
+    &--error {
+        border-color: #FD8A97!important;
+    }
+}
+
 .modal {
     position: fixed;
     top: 0;
@@ -146,6 +152,7 @@ footer {
         font-size: 14px;
         height: 45px;
         padding: 0 16px;
+        transition: 0.3s;
 
         @include placeholderColor(#C4C4C4);
     }

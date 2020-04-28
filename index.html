@@ -128,8 +128,8 @@
                 </div>
                 <form class="form-section__form">
                     <div class="form-section__inputs">
-                        <input id="middle-input-name" type="text" class="form-section__input" placeholder="Ваше имя">
-                        <input id="middle-input-email" type="email" class="form-section__input" placeholder="Email">
+                        <input id="middle-input-name" type="text" class="form-section__input data-input" placeholder="Ваше имя">
+                        <input id="middle-input-email" type="email" class="form-section__input data-input" placeholder="Email">
                     </div>
                     <div class="form-section__button-wrap">
                         <button onclick="SendData({'email':'middle-input-email', 'name':'middle-input-name'});return false;" class="form-section__button">Отправить</button>
@@ -322,8 +322,8 @@
                 </div>
                 <form class="form-section__form">
                     <div class="form-section__inputs">
-                        <input id="bottom-input-name" type="text" class="form-section__input" placeholder="Ваше имя">
-                        <input id="bottom-input-email" type="email" class="form-section__input" placeholder="Email">
+                        <input id="bottom-input-name" type="text" class="form-section__input data-input" placeholder="Ваше имя">
+                        <input id="bottom-input-email" type="email" class="form-section__input data-input" placeholder="Email">
                     </div>
                     <div class="form-section__button-wrap">
                         <button onclick="SendData({email:'bottom-input-email', name:'bottom-input-name'});return false;" class="form-section__button">Отправить</button>
@@ -362,21 +362,39 @@
         </div>
     </footer>
 
-    <div class="modal">
+    <div class="modal" id="form-modal">
         <div class="modal__content">
             <span class="modal__close"></span>
 
             <p class="modal__title">Оставьте ваш email</p>
             <p class="modal__text">и получите инструкцию «как увеличить все показатели ресторана на 30% за 2 месяца».</p>
 
-            <input id="modal-input-email"  type="text" class="modal__input" placeholder="Email">
+            <input id="modal-input-email"  type="text" class="modal__input data-input" placeholder="Email">
 
             <button onclick="SendData({email:'modal-input-email'});return false;" class="modal__button">Отправить</button>
         </div>
     </div>
 
+    <div class="modal" id="success-modal">
+        <div class="modal__content">
+            <span class="modal__close"></span>
+
+            <p class="modal__title">Ваша заявка принята</p>
+            <p class="modal__text">Совсем скоро мы с вами свяжемся!</p>
+        </div>
+    </div>
+
+    <div class="modal" id="error-modal">
+        <div class="modal__content">
+            <span class="modal__close"></span>
+
+            <p class="modal__title">Что-то пошло не так...</p>
+            <p class="modal__text">К сожалению, при отправке заявки произошла ошибка, попробуйте повторить позднее.</p>
+        </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/scripts.js?v=1.1"></script>
 </body>
 </html>

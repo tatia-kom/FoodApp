@@ -78,7 +78,7 @@ $(document).ready(function() {
     $('.open-modal').click(function(e) {
         e.preventDefault();
         $('body').addClass('opened-modal');
-        $('.modal').addClass('modal--opened');
+        $('#form-modal').addClass('modal--opened');
     });
 
     $('.modal').click(function(e) {
@@ -93,6 +93,10 @@ $(document).ready(function() {
     $('.modal__close').click(function(e) {
         $(this).parents('.modal').removeClass('modal--opened');
         $('body').removeClass('opened-modal');
+    });
+
+    $('.data-input').keyup(function() {
+        $(this).removeClass('data-input--error');
     });
 });
 
@@ -137,6 +141,7 @@ function SendData(Params)
         }
         else{
             error = true;
+            mail.addClass('data-input--error');
         }
     }
 
@@ -149,6 +154,7 @@ function SendData(Params)
         }
         else{
             error = true;
+            name.addClass('data-input--error');
         }
         
     }
@@ -162,9 +168,21 @@ function SendData(Params)
             success: function(data)
             {
                 // TODO: Какое то уведомление, что success
+
+                $('#form-modal').removeClass('modal--opened');
+                if (!$('body').hasClass('opened-modal')) {
+                    $('body').addClass('opened-modal');
+                }
+                $('#success-modal').addClass('modal--opened');
             },
             fail: function(data){
                 // TODO: Какое то уведомление, что fail
+
+                $('#form-modal').removeClass('modal--opened');
+                if (!$('body').hasClass('opened-modal')) {
+                    $('body').addClass('opened-modal');
+                }
+                $('#error-modal').addClass('modal--opened');
             }
         });
     
