@@ -131,7 +131,6 @@ function SendData(Params)
     {
         var mail = $('#' + emailId);
         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        console.log(mail.val().match(mailformat));
         if(mail && mail.val().match(mailformat))
         {
             params.email = mail.val();
@@ -162,18 +161,15 @@ function SendData(Params)
             data: params,
             success: function(data)
             {
-                console.log('success', data);
                 // TODO: Какое то уведомление, что success
             },
             fail: function(data){
-                console.log('fail', data);
                 // TODO: Какое то уведомление, что fail
             }
         });
     
         return false;
     }else{
-        console.log('error', error);
         // TODO: Ошибка какая то
     }
     
