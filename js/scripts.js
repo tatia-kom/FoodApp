@@ -118,3 +118,63 @@ function restructSliders() {
         }
     }
 }
+
+function SendData(Params)
+{
+    var emailId = Params && Params.email ? Params.email : null;
+    var nameId = Params && Params.name ? Params.name : null;
+
+    var params = {};
+
+    var error = false;
+    if(emailId)
+    {
+        var mail = $('#' + emailId);
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        console.log(mail.val().match(mailformat));
+        if(mail && mail.val().match(mailformat))
+        {
+            params.email = mail.val();
+        }
+        else{
+            error = true;
+        }
+    }
+
+    if(nameId)
+    {
+        var name = $('#' + nameId);
+        if(name && name.val())
+        {
+            params.name = name.val();
+        }
+        else{
+            error = true;
+        }
+        
+    }
+
+    if((params.name || params.email) && !error)
+    {
+        $.ajax({
+            type: "POST",
+            url: "http://35.189.206.115:3001/api/common/subscriptions",
+            data: params,
+            success: function(data)
+            {
+                console.log('success', data);
+                // TODO: Какое то уведомление, что success
+            },
+            fail: function(data){
+                console.log('fail', data);
+                // TODO: Какое то уведомление, что fail
+            }
+        });
+    
+        return false;
+    }else{
+        console.log('error', error);
+        // TODO: Ошибка какая то
+    }
+    
+}

@@ -128,11 +128,11 @@
                 </div>
                 <form class="form-section__form">
                     <div class="form-section__inputs">
-                        <input type="text" class="form-section__input" placeholder="Ваше имя">
-                        <input type="email" class="form-section__input" placeholder="Email">
+                        <input id="middle-input-name" type="text" class="form-section__input" placeholder="Ваше имя">
+                        <input id="middle-input-email" type="email" class="form-section__input" placeholder="Email">
                     </div>
                     <div class="form-section__button-wrap">
-                        <button class="form-section__button">Отправить</button>
+                        <button onclick="SendData({'email':'middle-input-email', 'name':'middle-input-name'});return false;" class="form-section__button">Отправить</button>
                     </div>
                 </form>
             </div>
@@ -322,11 +322,11 @@
                 </div>
                 <form class="form-section__form">
                     <div class="form-section__inputs">
-                        <input type="text" class="form-section__input" placeholder="Ваше имя">
-                        <input type="email" class="form-section__input" placeholder="Email">
+                        <input id="bottom-input-name" type="text" class="form-section__input" placeholder="Ваше имя">
+                        <input id="bottom-input-email" type="email" class="form-section__input" placeholder="Email">
                     </div>
                     <div class="form-section__button-wrap">
-                        <button class="form-section__button">Отправить</button>
+                        <button onclick="SendData({email:'bottom-input-email', name:'bottom-input-name'});return false;" class="form-section__button">Отправить</button>
                     </div>
                 </form>
             </div>
@@ -340,15 +340,15 @@
                     <a href="#" class="app-icon"><img src="img/app-icon.svg" alt=""></a>
                     <div class="footer__follow">
                         <p>Следите за нами</p>
-                        <a href="#"><img src="img/fb.svg" alt=""></a>
-                        <a href="#"><img src="img/insta.svg" alt=""></a>
+                        <a href="https://www.facebook.com/itsfoodapp"><img src="img/fb.svg" alt=""></a>
+                        <a href="https://www.instagram.com/itsfood.app/"><img src="img/insta.svg" alt=""></a>
                     </div>
                 </div>
                 <div class="footer__center">
                     <div class="footer__apps">
                         <p>Наше приложение</p>
-                        <a href="#"><img src="img/google-play.png" alt=""></a>
-                        <a href="#"><img src="img/app-store.png" alt=""></a>
+                        <a href="https://play.google.com/store/apps/details?id=io.foodapp.android&hl=en"><img src="img/google-play.png" alt=""></a>
+                        <a href="https://apps.apple.com/ru/app/foodapp/id1421848543"><img src="img/app-store.png" alt=""></a>
                     </div>
                     <p class="footer__copyright">Copyright © 2020 FoodApp. All rights reserved.</p>
                 </div>
@@ -369,9 +369,9 @@
             <p class="modal__title">Оставьте ваш email</p>
             <p class="modal__text">и получите инструкцию «как увеличить все показатели ресторана на 30% за 2 месяца».</p>
 
-            <input type="text" class="modal__input" placeholder="Email">
+            <input id="modal-input-email"  type="text" class="modal__input" placeholder="Email">
 
-            <buton class="modal__button">Отправить</buton>
+            <button onclick="SendData({email:'modal-input-email'});return false;" class="modal__button">Отправить</button>
         </div>
     </div>
 
