@@ -170,7 +170,7 @@ function SendData(Params)
     {
         $.ajax({
             type: "POST",
-            url: "http://foodapp-proxy.herokuapp.com/api/common/subscriptions",
+            url: "https://foodapp-proxy.herokuapp.com/api/common/subscriptions",
             data: params,
             success: function(data)
             {
